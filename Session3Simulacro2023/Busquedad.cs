@@ -1,5 +1,6 @@
 ﻿using Session3Simulacro2023.helpers;
 using Session3Simulacro2023.Model;
+using Session3Simulacro2023.Model.Data;
 
 using System;
 using System.Collections.Generic;
@@ -34,23 +35,37 @@ namespace Session3Simulacro2023 {
 
         }
 
+        public void Llenar(DataGridView tabla, int salida = 0, int destinon = 0, DateTime? date = null) {
+            using (Session3Entities db = new Session3Entities()) {
+                var list = db.Schedules.ToList().Where(x => (x.Route.DepartureAirportID== salida || salida == 0)
+                && (x.Route.ArrivalAirportID == destinon || destinon == 0)
+                &&  (date == null  || date.Value.Date ==x.Date.Date)
+                ).ToList().Select(x => new Vuelo(x)).ToList();
+                tabla.DataSource = list;
+            }
+        }
         private void Form1_Load(object sender, EventArgs e) {
-            using (Session3Entities db = new Session3Entities())
-            {
+            using (Session3Entities db = new Session3Entities()) {
                 var list = db.Airports.ToList();
                 list.Insert(0, new Airport() { IATACode = "Todos" });
                 cmbDestino.LlenarCombo(list.ToList(), "IATACode", "ID");
                 cmbOrigen.LlenarCombo(list.ToList(), "IATACode", "ID");
                 cmbCabina.LlenarCombo(db.CabinTypes.ToList(), "Name", "ID");
             }
+            Llenar(TSoloIda);
+            Llenar(TRetorno);
         }
 
-        private void Rretorno_CheckedChanged(object sender, EventArgs e)
-        {
-          DRetorno.Enabled =   PRetorno.Visible = Rretorno.Checked;
+        private void Rretorno_CheckedChanged(object sender, EventArgs e) {
+            DRetorno.Enabled = PRetorno.Visible = Rretorno.Checked;
 
         }
 
-        
+        private void btnFiltro_Click(object sender, EventArgs e) {
+            int salida = (int)cmbOrigen.SelectedValue;
+            int destino = (int)cmbDestino.SelectedValue;
+            Llenar(TSoloIda, salida,destino);
+            Llenar(TRetorno, destino, salida);
+        }
     }
 }
