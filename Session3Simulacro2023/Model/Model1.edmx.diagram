@@ -4,29 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d3c8490a9a5f45cfbe2e3bbc9037833d" Name="Diagram1">
-        <EntityTypeShape EntityType="Session3Model.Aircraft" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.Airport" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.CabinType" Width="1.5" PointX="7.5" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.Country" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.Office" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.Role" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.Route" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.Schedule" Width="1.5" PointX="7.5" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.sysdiagram" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.Ticket" Width="1.5" PointX="9.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Session3Model.User" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
-        <AssociationConnector Association="Session3Model.FK_Schedule_AirCraft" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_AirPort_Country" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Routes_Airports2" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Routes_Airports3" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Ticket_TravelClass" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Office_Country" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Users_Offices" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Users_Roles" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Schedule_Routes" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Ticket_Schedule" ManuallyRouted="false" />
-        <AssociationConnector Association="Session3Model.FK_Ticket_User" ManuallyRouted="false" />
+      <Diagram DiagramId="d3c8490a9a5f45cfbe2e3bbc9037833d" Name="Diagram1" ZoomLevel="34">
+        <EntityTypeShape EntityType="Session3Model.Aircraft" Width="1.5" PointX="5.25" PointY="10.625" />
+        <EntityTypeShape EntityType="Session3Model.Airport" Width="1.5" PointX="3" PointY="2.625" />
+        <EntityTypeShape EntityType="Session3Model.CabinType" Width="1.5" PointX="7.5" PointY="7" />
+        <EntityTypeShape EntityType="Session3Model.Country" Width="1.5" PointX="0.75" PointY="4.375" />
+        <EntityTypeShape EntityType="Session3Model.Office" Width="1.5" PointX="3" PointY="5.75" />
+        <EntityTypeShape EntityType="Session3Model.Role" Width="1.5" PointX="3" PointY="9.125" />
+        <EntityTypeShape EntityType="Session3Model.Route" Width="1.5" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="Session3Model.Schedule" Width="1.5" PointX="7.5" PointY="2.25" />
+        <EntityTypeShape EntityType="Session3Model.Ticket" Width="1.5" PointX="9.75" PointY="3.875" />
+        <EntityTypeShape EntityType="Session3Model.User" Width="1.5" PointX="5.25" PointY="6.25" />
+        <AssociationConnector Association="Session3Model.FK_Schedule_AirCraft" />
+        <AssociationConnector Association="Session3Model.FK_AirPort_Country" />
+        <AssociationConnector Association="Session3Model.FK_Routes_Airports2" />
+        <AssociationConnector Association="Session3Model.FK_Routes_Airports3" />
+        <AssociationConnector Association="Session3Model.FK_Ticket_TravelClass" />
+        <AssociationConnector Association="Session3Model.FK_Office_Country" />
+        <AssociationConnector Association="Session3Model.FK_Users_Offices" />
+        <AssociationConnector Association="Session3Model.FK_Users_Roles" />
+        <AssociationConnector Association="Session3Model.FK_Schedule_Routes" />
+        <AssociationConnector Association="Session3Model.FK_Ticket_Schedule" />
+        <AssociationConnector Association="Session3Model.FK_Ticket_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
