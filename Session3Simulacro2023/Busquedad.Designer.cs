@@ -25,32 +25,32 @@
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbDestino = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbOrigen = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbCabina = new System.Windows.Forms.ComboBox();
-            this.Rretorno = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnFiltro = new System.Windows.Forms.Button();
+            this.DRetorno = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.Rretorno = new System.Windows.Forms.RadioButton();
+            this.cmbCabina = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbDestino = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.DRetorno = new System.Windows.Forms.DateTimePicker();
-            this.btnFiltro = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbOrigen = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.PRetorno = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnReservar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnReservar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -95,50 +95,43 @@
             this.groupBox1.Text = "Filtros de busquedad";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // cmbDestino
+            // btnFiltro
             // 
-            this.cmbDestino.FormattingEnabled = true;
-            this.cmbDestino.Location = new System.Drawing.Point(360, 44);
-            this.cmbDestino.Name = "cmbDestino";
-            this.cmbDestino.Size = new System.Drawing.Size(163, 29);
-            this.cmbDestino.TabIndex = 1;
+            this.btnFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltro.ForeColor = System.Drawing.Color.Green;
+            this.btnFiltro.Location = new System.Drawing.Point(851, 136);
+            this.btnFiltro.Name = "btnFiltro";
+            this.btnFiltro.Size = new System.Drawing.Size(96, 39);
+            this.btnFiltro.TabIndex = 5;
+            this.btnFiltro.Text = "Aplicar";
+            this.btnFiltro.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // DRetorno
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(231, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Fecha de Salida";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
+            this.DRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DRetorno.Location = new System.Drawing.Point(684, 110);
+            this.DRetorno.Name = "DRetorno";
+            this.DRetorno.Size = new System.Drawing.Size(134, 27);
+            this.DRetorno.TabIndex = 4;
             // 
-            // cmbOrigen
+            // dateTimePicker1
             // 
-            this.cmbOrigen.FormattingEnabled = true;
-            this.cmbOrigen.Location = new System.Drawing.Point(101, 47);
-            this.cmbOrigen.Name = "cmbOrigen";
-            this.cmbOrigen.Size = new System.Drawing.Size(163, 29);
-            this.cmbOrigen.TabIndex = 1;
-            this.cmbOrigen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(379, 110);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(134, 27);
+            this.dateTimePicker1.TabIndex = 4;
             // 
-            // label3
+            // radioButton2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(545, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tipo de cabina";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // cmbCabina
-            // 
-            this.cmbCabina.FormattingEnabled = true;
-            this.cmbCabina.Location = new System.Drawing.Point(688, 47);
-            this.cmbCabina.Name = "cmbCabina";
-            this.cmbCabina.Size = new System.Drawing.Size(163, 29);
-            this.cmbCabina.TabIndex = 1;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(130, 110);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(88, 25);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.Text = "Solo ida";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // Rretorno
             // 
@@ -153,23 +146,31 @@
             this.Rretorno.UseVisualStyleBackColor = true;
             this.Rretorno.CheckedChanged += new System.EventHandler(this.Rretorno_CheckedChanged);
             // 
-            // radioButton2
+            // cmbCabina
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(130, 110);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(88, 25);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.Text = "Solo ida";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.cmbCabina.FormattingEnabled = true;
+            this.cmbCabina.Location = new System.Drawing.Point(688, 47);
+            this.cmbCabina.Name = "cmbCabina";
+            this.cmbCabina.Size = new System.Drawing.Size(163, 29);
+            this.cmbCabina.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // label3
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(379, 110);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(134, 27);
-            this.dateTimePicker1.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(545, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tipo de cabina";
+            this.label3.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // cmbDestino
+            // 
+            this.cmbDestino.FormattingEnabled = true;
+            this.cmbDestino.Location = new System.Drawing.Point(360, 44);
+            this.cmbDestino.Name = "cmbDestino";
+            this.cmbDestino.Size = new System.Drawing.Size(163, 29);
+            this.cmbDestino.TabIndex = 1;
             // 
             // label4
             // 
@@ -191,25 +192,24 @@
             this.label5.Text = "Fecha de regreso";
             this.label5.Click += new System.EventHandler(this.label1_Click);
             // 
-            // DRetorno
+            // label2
             // 
-            this.DRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DRetorno.Location = new System.Drawing.Point(684, 110);
-            this.DRetorno.Name = "DRetorno";
-            this.DRetorno.Size = new System.Drawing.Size(134, 27);
-            this.DRetorno.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(231, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Fecha de Salida";
+            this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnFiltro
+            // cmbOrigen
             // 
-            this.btnFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltro.ForeColor = System.Drawing.Color.Green;
-            this.btnFiltro.Location = new System.Drawing.Point(851, 136);
-            this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(96, 39);
-            this.btnFiltro.TabIndex = 5;
-            this.btnFiltro.Text = "Aplicar";
-            this.btnFiltro.UseVisualStyleBackColor = true;
+            this.cmbOrigen.FormattingEnabled = true;
+            this.cmbOrigen.Location = new System.Drawing.Point(101, 47);
+            this.cmbOrigen.Name = "cmbOrigen";
+            this.cmbOrigen.Size = new System.Drawing.Size(163, 29);
+            this.cmbOrigen.TabIndex = 1;
+            this.cmbOrigen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -223,14 +223,16 @@
             this.panel1.Size = new System.Drawing.Size(959, 209);
             this.panel1.TabIndex = 1;
             // 
-            // label6
+            // dataGridView1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(218, 21);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Detalle de vuelos de salida";
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 39);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(935, 167);
+            this.dataGridView1.TabIndex = 3;
             // 
             // checkBox1
             // 
@@ -243,16 +245,14 @@
             this.checkBox1.Text = "Visualizar tres dias antes y despues";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // label6
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(935, 167);
-            this.dataGridView1.TabIndex = 3;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(218, 21);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Detalle de vuelos de salida";
             // 
             // PRetorno
             // 
@@ -308,6 +308,18 @@
             this.panel3.Size = new System.Drawing.Size(959, 100);
             this.panel3.TabIndex = 3;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Red;
+            this.btnSalir.Location = new System.Drawing.Point(796, 40);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(96, 39);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -320,6 +332,18 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Confirmación reserva para : ";
+            // 
+            // btnReservar
+            // 
+            this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservar.ForeColor = System.Drawing.Color.Green;
+            this.btnReservar.Location = new System.Drawing.Point(273, 40);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(182, 39);
+            this.btnReservar.TabIndex = 6;
+            this.btnReservar.Text = "Reservar vuelo";
+            this.btnReservar.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -337,30 +361,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Pasajeros";
             this.label8.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnReservar
-            // 
-            this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservar.ForeColor = System.Drawing.Color.Green;
-            this.btnReservar.Location = new System.Drawing.Point(273, 40);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(182, 39);
-            this.btnReservar.TabIndex = 6;
-            this.btnReservar.Text = "Reservar vuelo";
-            this.btnReservar.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.Red;
-            this.btnSalir.Location = new System.Drawing.Point(796, 40);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(96, 39);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // Busquedad
             // 
