@@ -61,6 +61,12 @@
     <Compile Include="Busquedad.Designer.cs">
       <DependentUpon>Busquedad.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmReserva.Designer.cs">
+      <DependentUpon>ConfirmReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpers\Util.cs" />
     <Compile Include="Model\Aircraft.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -115,6 +121,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Busquedad.resx">
       <DependentUpon>Busquedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmReserva.resx">
+      <DependentUpon>ConfirmReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -50,9 +50,9 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnReservar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.rSalida.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSoloIda)).BeginInit();
@@ -61,6 +61,7 @@
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -222,6 +223,8 @@
             // 
             // TSoloIda
             // 
+            this.TSoloIda.AllowUserToAddRows = false;
+            this.TSoloIda.AllowUserToDeleteRows = false;
             this.TSoloIda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -229,16 +232,18 @@
             this.TSoloIda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TSoloIda.Location = new System.Drawing.Point(12, 39);
             this.TSoloIda.Name = "TSoloIda";
+            this.TSoloIda.ReadOnly = true;
             this.TSoloIda.RowHeadersWidth = 51;
+            this.TSoloIda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TSoloIda.Size = new System.Drawing.Size(969, 167);
             this.TSoloIda.TabIndex = 3;
             // 
-            // checkBox1
+            // Csalida
             // 
             this.Csalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Csalida.AutoSize = true;
             this.Csalida.Location = new System.Drawing.Point(688, 11);
-            this.Csalida.Name = "checkBox1";
+            this.Csalida.Name = "Csalida";
             this.Csalida.Size = new System.Drawing.Size(294, 25);
             this.Csalida.TabIndex = 2;
             this.Csalida.Text = "Visualizar tres dias antes y despues";
@@ -268,6 +273,8 @@
             // 
             // TRetorno
             // 
+            this.TRetorno.AllowUserToAddRows = false;
+            this.TRetorno.AllowUserToDeleteRows = false;
             this.TRetorno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -275,7 +282,9 @@
             this.TRetorno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TRetorno.Location = new System.Drawing.Point(12, 39);
             this.TRetorno.Name = "TRetorno";
+            this.TRetorno.ReadOnly = true;
             this.TRetorno.RowHeadersWidth = 51;
+            this.TRetorno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TRetorno.Size = new System.Drawing.Size(969, 167);
             this.TRetorno.TabIndex = 3;
             // 
@@ -326,8 +335,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Controls.Add(this.numericUpDown1);
             this.groupBox2.Controls.Add(this.btnReservar);
-            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(228, 6);
             this.groupBox2.Name = "groupBox2";
@@ -341,19 +350,13 @@
             this.btnReservar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservar.ForeColor = System.Drawing.Color.Green;
-            this.btnReservar.Location = new System.Drawing.Point(273, 40);
+            this.btnReservar.Location = new System.Drawing.Point(250, 31);
             this.btnReservar.Name = "btnReservar";
             this.btnReservar.Size = new System.Drawing.Size(182, 39);
             this.btnReservar.TabIndex = 6;
             this.btnReservar.Text = "Reservar vuelo";
             this.btnReservar.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(24, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 0;
+            this.btnReservar.Click += new System.EventHandler(this.btnReservar_Click);
             // 
             // label8
             // 
@@ -367,6 +370,29 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(18, 36);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDown1.TabIndex = 7;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // Busquedad
             // 
@@ -393,6 +419,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,9 +452,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnReservar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
