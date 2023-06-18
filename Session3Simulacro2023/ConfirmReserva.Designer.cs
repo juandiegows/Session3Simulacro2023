@@ -23,6 +23,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblSNumeroVuelo = new System.Windows.Forms.Label();
             this.lblSOrigen = new System.Windows.Forms.Label();
@@ -45,21 +47,21 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.GBPasajero = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnFiltro = new System.Windows.Forms.Button();
             this.PBPasaporte = new System.Windows.Forms.PictureBox();
-            this.DRetorno = new System.Windows.Forms.DateTimePicker();
-            this.cmbPais = new System.Windows.Forms.ComboBox();
+            this.DFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.cmbPassport = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNumberPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblFileName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -67,15 +69,25 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.VerPasaporte = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroPasaporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paisIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paisPasaporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pasajeroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.BGRegreso.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.GBPasajero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasaporte)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pasajeroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -93,7 +105,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1102, 100);
+            this.groupBox1.Size = new System.Drawing.Size(1340, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles del vuelo de salida";
@@ -208,7 +220,7 @@
             this.BGRegreso.Dock = System.Windows.Forms.DockStyle.Top;
             this.BGRegreso.Location = new System.Drawing.Point(0, 100);
             this.BGRegreso.Name = "BGRegreso";
-            this.BGRegreso.Size = new System.Drawing.Size(1102, 100);
+            this.BGRegreso.Size = new System.Drawing.Size(1340, 100);
             this.BGRegreso.TabIndex = 1;
             this.BGRegreso.TabStop = false;
             this.BGRegreso.Text = "Detalles del vuelo de regreso";
@@ -308,53 +320,54 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Destino :";
             // 
-            // groupBox3
+            // GBPasajero
             // 
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.btnFiltro);
-            this.groupBox3.Controls.Add(this.PBPasaporte);
-            this.groupBox3.Controls.Add(this.DRetorno);
-            this.groupBox3.Controls.Add(this.cmbPais);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.lblFileName);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Location = new System.Drawing.Point(0, 200);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1102, 212);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos del pasajero :";
+            this.GBPasajero.Controls.Add(this.btnAgregar);
+            this.GBPasajero.Controls.Add(this.btnFiltro);
+            this.GBPasajero.Controls.Add(this.PBPasaporte);
+            this.GBPasajero.Controls.Add(this.DFechaNacimiento);
+            this.GBPasajero.Controls.Add(this.cmbPassport);
+            this.GBPasajero.Controls.Add(this.label8);
+            this.GBPasajero.Controls.Add(this.label21);
+            this.GBPasajero.Controls.Add(this.txtCelular);
+            this.GBPasajero.Controls.Add(this.label10);
+            this.GBPasajero.Controls.Add(this.txtApellido);
+            this.GBPasajero.Controls.Add(this.label6);
+            this.GBPasajero.Controls.Add(this.txtNumberPass);
+            this.GBPasajero.Controls.Add(this.label4);
+            this.GBPasajero.Controls.Add(this.txtNombre);
+            this.GBPasajero.Controls.Add(this.lblFileName);
+            this.GBPasajero.Controls.Add(this.label2);
+            this.GBPasajero.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GBPasajero.Location = new System.Drawing.Point(0, 200);
+            this.GBPasajero.Name = "GBPasajero";
+            this.GBPasajero.Size = new System.Drawing.Size(1340, 212);
+            this.GBPasajero.TabIndex = 2;
+            this.GBPasajero.TabStop = false;
+            this.GBPasajero.Text = "Datos del pasajero :";
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(924, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 39);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Agregar pasajero";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Green;
+            this.btnAgregar.Location = new System.Drawing.Point(1162, 164);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(172, 39);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Agregar pasajero";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnFiltro
             // 
             this.btnFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltro.ForeColor = System.Drawing.Color.Green;
-            this.btnFiltro.Location = new System.Drawing.Point(687, 167);
+            this.btnFiltro.Location = new System.Drawing.Point(925, 167);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(208, 36);
-            this.btnFiltro.TabIndex = 7;
+            this.btnFiltro.TabIndex = 6;
             this.btnFiltro.Text = "Seleccionar foto";
             this.btnFiltro.UseVisualStyleBackColor = true;
             this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
@@ -368,21 +381,21 @@
             this.PBPasaporte.TabIndex = 6;
             this.PBPasaporte.TabStop = false;
             // 
-            // DRetorno
+            // DFechaNacimiento
             // 
-            this.DRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DRetorno.Location = new System.Drawing.Point(517, 128);
-            this.DRetorno.Name = "DRetorno";
-            this.DRetorno.Size = new System.Drawing.Size(134, 27);
-            this.DRetorno.TabIndex = 5;
+            this.DFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DFechaNacimiento.Location = new System.Drawing.Point(517, 128);
+            this.DFechaNacimiento.Name = "DFechaNacimiento";
+            this.DFechaNacimiento.Size = new System.Drawing.Size(134, 27);
+            this.DFechaNacimiento.TabIndex = 5;
             // 
-            // cmbPais
+            // cmbPassport
             // 
-            this.cmbPais.FormattingEnabled = true;
-            this.cmbPais.Location = new System.Drawing.Point(496, 79);
-            this.cmbPais.Name = "cmbPais";
-            this.cmbPais.Size = new System.Drawing.Size(155, 29);
-            this.cmbPais.TabIndex = 3;
+            this.cmbPassport.FormattingEnabled = true;
+            this.cmbPassport.Location = new System.Drawing.Point(496, 79);
+            this.cmbPassport.Name = "cmbPassport";
+            this.cmbPassport.Size = new System.Drawing.Size(155, 29);
+            this.cmbPassport.TabIndex = 3;
             // 
             // label8
             // 
@@ -402,12 +415,12 @@
             this.label21.TabIndex = 1;
             this.label21.Text = "Fecha Nacimiento";
             // 
-            // textBox4
+            // txtCelular
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 130);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 27);
-            this.textBox4.TabIndex = 2;
+            this.txtCelular.Location = new System.Drawing.Point(109, 130);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(161, 27);
+            this.txtCelular.TabIndex = 4;
             // 
             // label10
             // 
@@ -418,12 +431,12 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "Celular";
             // 
-            // textBox3
+            // txtApellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(365, 40);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 27);
-            this.textBox3.TabIndex = 2;
+            this.txtApellido.Location = new System.Drawing.Point(365, 40);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(161, 27);
+            this.txtApellido.TabIndex = 1;
             // 
             // label6
             // 
@@ -434,12 +447,12 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Apellidos";
             // 
-            // textBox2
+            // txtNumberPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 27);
-            this.textBox2.TabIndex = 2;
+            this.txtNumberPass.Location = new System.Drawing.Point(156, 82);
+            this.txtNumberPass.Name = "txtNumberPass";
+            this.txtNumberPass.Size = new System.Drawing.Size(161, 27);
+            this.txtNumberPass.TabIndex = 2;
             // 
             // label4
             // 
@@ -450,12 +463,12 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "N° Pasaporte";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 27);
-            this.textBox1.TabIndex = 2;
+            this.txtNombre.Location = new System.Drawing.Point(109, 40);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(161, 27);
+            this.txtNombre.TabIndex = 0;
             // 
             // lblFileName
             // 
@@ -481,7 +494,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Location = new System.Drawing.Point(0, 412);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1102, 247);
+            this.groupBox4.Size = new System.Drawing.Size(1340, 247);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lista de pasajeros";
@@ -491,7 +504,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(917, 197);
+            this.button2.Location = new System.Drawing.Point(1155, 197);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(172, 39);
             this.button2.TabIndex = 8;
@@ -500,23 +513,39 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombresDataGridViewTextBoxColumn,
+            this.apellidosDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.numeroPasaporteDataGridViewTextBoxColumn,
+            this.paisIdDataGridViewTextBoxColumn,
+            this.paisPasaporteDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.VerPasaporte});
+            this.dataGridView1.DataSource = this.pasajeroBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 26);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 165);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1322, 165);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnRegresar);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnConfirm);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 659);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1102, 67);
+            this.panel1.Size = new System.Drawing.Size(1340, 67);
             this.panel1.TabIndex = 4;
             // 
             // btnRegresar
@@ -524,7 +553,7 @@
             this.btnRegresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.ForeColor = System.Drawing.Color.Red;
-            this.btnRegresar.Location = new System.Drawing.Point(310, 16);
+            this.btnRegresar.Location = new System.Drawing.Point(429, 16);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(251, 39);
             this.btnRegresar.TabIndex = 9;
@@ -532,31 +561,98 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // button3
+            // btnConfirm
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Green;
-            this.button3.Location = new System.Drawing.Point(589, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 39);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Confirmar reserva";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConfirm.Enabled = false;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.ForeColor = System.Drawing.Color.Green;
+            this.btnConfirm.Location = new System.Drawing.Point(708, 16);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(172, 39);
+            this.btnConfirm.TabIndex = 8;
+            this.btnConfirm.Text = "Confirmar reserva";
+            this.btnConfirm.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Archivos de imagen|*.png;*.jpg;*.jpeg";
             // 
+            // VerPasaporte
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Green;
+            this.VerPasaporte.DefaultCellStyle = dataGridViewCellStyle1;
+            this.VerPasaporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VerPasaporte.HeaderText = "Ver pasaporte";
+            this.VerPasaporte.Name = "VerPasaporte";
+            this.VerPasaporte.ReadOnly = true;
+            this.VerPasaporte.Text = "Ver pasaporte";
+            this.VerPasaporte.UseColumnTextForButtonValue = true;
+            // 
+            // nombresDataGridViewTextBoxColumn
+            // 
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha de Nacimiento";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroPasaporteDataGridViewTextBoxColumn
+            // 
+            this.numeroPasaporteDataGridViewTextBoxColumn.DataPropertyName = "NumeroPasaporte";
+            this.numeroPasaporteDataGridViewTextBoxColumn.HeaderText = "Número de pasaporte";
+            this.numeroPasaporteDataGridViewTextBoxColumn.Name = "numeroPasaporteDataGridViewTextBoxColumn";
+            this.numeroPasaporteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // paisIdDataGridViewTextBoxColumn
+            // 
+            this.paisIdDataGridViewTextBoxColumn.DataPropertyName = "PaisId";
+            this.paisIdDataGridViewTextBoxColumn.HeaderText = "PaisId";
+            this.paisIdDataGridViewTextBoxColumn.Name = "paisIdDataGridViewTextBoxColumn";
+            this.paisIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // paisPasaporteDataGridViewTextBoxColumn
+            // 
+            this.paisPasaporteDataGridViewTextBoxColumn.DataPropertyName = "PaisPasaporte";
+            this.paisPasaporteDataGridViewTextBoxColumn.HeaderText = "Pais de pasaporte";
+            this.paisPasaporteDataGridViewTextBoxColumn.Name = "paisPasaporteDataGridViewTextBoxColumn";
+            this.paisPasaporteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pasajeroBindingSource
+            // 
+            this.pasajeroBindingSource.DataSource = typeof(Session3Simulacro2023.Model.Data.Pasajero);
+            // 
             // ConfirmReserva
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1119, 511);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClientSize = new System.Drawing.Size(1357, 511);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.GBPasajero);
             this.Controls.Add(this.BGRegreso);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -566,12 +662,13 @@
             this.groupBox1.PerformLayout();
             this.BGRegreso.ResumeLayout(false);
             this.BGRegreso.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.GBPasajero.ResumeLayout(false);
+            this.GBPasajero.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBPasaporte)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pasajeroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -600,21 +697,21 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cmbPais;
+        private System.Windows.Forms.GroupBox GBPasajero;
+        private System.Windows.Forms.ComboBox cmbPassport;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNumberPass;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker DRetorno;
+        private System.Windows.Forms.DateTimePicker DFechaNacimiento;
         private System.Windows.Forms.PictureBox PBPasaporte;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnFiltro;
         private System.Windows.Forms.Label lblFileName;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -622,7 +719,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroPasaporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paisIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paisPasaporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn VerPasaporte;
+        private System.Windows.Forms.BindingSource pasajeroBindingSource;
     }
 }

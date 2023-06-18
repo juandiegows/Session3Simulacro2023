@@ -133,7 +133,7 @@ namespace Session3Simulacro2023 {
                 //ocultamos el formulario
                 this.Hide();
                 //abrimos el formulario
-                new ConfirmReserva(salida, retorno, cabinType).ShowDialog();
+                new ConfirmReserva(salida, retorno, cabinType,totalPasajero).ShowDialog();
                 //mostramos el formulario cuando se cierre el de arriba
                 this.Show();
             }
