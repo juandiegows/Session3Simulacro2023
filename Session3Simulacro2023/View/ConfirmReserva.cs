@@ -1,6 +1,7 @@
 ﻿using Session3Simulacro2023.helpers;
 using Session3Simulacro2023.Model;
 using Session3Simulacro2023.Model.Data;
+using Session3Simulacro2023.View;
 
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,14 @@ namespace Session3Simulacro2023 {
     public partial class ConfirmReserva : Form {
         public int Cantidad { set; get; }
         public List<Pasajero> Pasajeros = new List<Pasajero>();
+        Schedule Salida, Retorno;
+        CabinType CabinType;
         public ConfirmReserva(Schedule salida, Schedule retorno, CabinType cabinType, int cantidad) {
             InitializeComponent();
+            Salida = salida;
+            Retorno = retorno;
+            CabinType = cabinType;
+            Cantidad = cantidad;
 
             txtApellido.Required();
             txtCelular.Required();
@@ -31,7 +38,7 @@ namespace Session3Simulacro2023 {
             lblSFecha.Text = salida.Date.ToShortDateString();
             lblSNumeroVuelo.Text = salida.FlightNumber.ToString();
             lblSCabina.Text = cabinType.Name;
-            Cantidad = cantidad;
+       
 
             if (retorno != null) {
                 lblROrigen.Text = retorno.Route.Airport1.IATACode;
@@ -113,6 +120,12 @@ namespace Session3Simulacro2023 {
                 int row = e.RowIndex;
                 Pasajero pasajero = Pasajeros[row];
                 new VerPasaporte(pasajero).ShowDialog();
+            }
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e) {
+           if( new Confirmacion(Pasajeros, Salida, Retorno, CabinType).ShowDialog() == DialogResult.OK) {
+                this.Close();
             }
         }
     }

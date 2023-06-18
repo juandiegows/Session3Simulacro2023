@@ -67,11 +67,11 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.VerPasaporte = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.VerPasaporte = new System.Windows.Forms.DataGridViewButtonColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,7 +105,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1340, 100);
+            this.groupBox1.Size = new System.Drawing.Size(1357, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles del vuelo de salida";
@@ -220,7 +220,7 @@
             this.BGRegreso.Dock = System.Windows.Forms.DockStyle.Top;
             this.BGRegreso.Location = new System.Drawing.Point(0, 100);
             this.BGRegreso.Name = "BGRegreso";
-            this.BGRegreso.Size = new System.Drawing.Size(1340, 100);
+            this.BGRegreso.Size = new System.Drawing.Size(1357, 100);
             this.BGRegreso.TabIndex = 1;
             this.BGRegreso.TabStop = false;
             this.BGRegreso.Text = "Detalles del vuelo de regreso";
@@ -341,7 +341,7 @@
             this.GBPasajero.Dock = System.Windows.Forms.DockStyle.Top;
             this.GBPasajero.Location = new System.Drawing.Point(0, 200);
             this.GBPasajero.Name = "GBPasajero";
-            this.GBPasajero.Size = new System.Drawing.Size(1340, 212);
+            this.GBPasajero.Size = new System.Drawing.Size(1357, 212);
             this.GBPasajero.TabIndex = 2;
             this.GBPasajero.TabStop = false;
             this.GBPasajero.Text = "Datos del pasajero :";
@@ -351,7 +351,7 @@
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregar.Location = new System.Drawing.Point(1162, 164);
+            this.btnAgregar.Location = new System.Drawing.Point(1179, 164);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(172, 39);
             this.btnAgregar.TabIndex = 7;
@@ -364,7 +364,7 @@
             this.btnFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltro.ForeColor = System.Drawing.Color.Green;
-            this.btnFiltro.Location = new System.Drawing.Point(925, 167);
+            this.btnFiltro.Location = new System.Drawing.Point(942, 167);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(208, 36);
             this.btnFiltro.TabIndex = 6;
@@ -494,7 +494,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Location = new System.Drawing.Point(0, 412);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1340, 247);
+            this.groupBox4.Size = new System.Drawing.Size(1357, 247);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lista de pasajeros";
@@ -504,7 +504,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(1155, 197);
+            this.button2.Location = new System.Drawing.Point(1172, 197);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(172, 39);
             this.button2.TabIndex = 8;
@@ -534,9 +534,21 @@
             this.dataGridView1.Location = new System.Drawing.Point(6, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1322, 165);
+            this.dataGridView1.Size = new System.Drawing.Size(1339, 165);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // VerPasaporte
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Green;
+            this.VerPasaporte.DefaultCellStyle = dataGridViewCellStyle1;
+            this.VerPasaporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VerPasaporte.HeaderText = "Ver pasaporte";
+            this.VerPasaporte.Name = "VerPasaporte";
+            this.VerPasaporte.ReadOnly = true;
+            this.VerPasaporte.Text = "Ver pasaporte";
+            this.VerPasaporte.UseColumnTextForButtonValue = true;
             // 
             // panel1
             // 
@@ -545,7 +557,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 659);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 67);
+            this.panel1.Size = new System.Drawing.Size(1357, 67);
             this.panel1.TabIndex = 4;
             // 
             // btnRegresar
@@ -553,7 +565,7 @@
             this.btnRegresar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.ForeColor = System.Drawing.Color.Red;
-            this.btnRegresar.Location = new System.Drawing.Point(429, 16);
+            this.btnRegresar.Location = new System.Drawing.Point(437, 16);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(251, 39);
             this.btnRegresar.TabIndex = 9;
@@ -567,29 +579,18 @@
             this.btnConfirm.Enabled = false;
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.ForeColor = System.Drawing.Color.Green;
-            this.btnConfirm.Location = new System.Drawing.Point(708, 16);
+            this.btnConfirm.Location = new System.Drawing.Point(716, 16);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(172, 39);
             this.btnConfirm.TabIndex = 8;
             this.btnConfirm.Text = "Confirmar reserva";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Archivos de imagen|*.png;*.jpg;*.jpeg";
-            // 
-            // VerPasaporte
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Green;
-            this.VerPasaporte.DefaultCellStyle = dataGridViewCellStyle1;
-            this.VerPasaporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VerPasaporte.HeaderText = "Ver pasaporte";
-            this.VerPasaporte.Name = "VerPasaporte";
-            this.VerPasaporte.ReadOnly = true;
-            this.VerPasaporte.Text = "Ver pasaporte";
-            this.VerPasaporte.UseColumnTextForButtonValue = true;
             // 
             // nombresDataGridViewTextBoxColumn
             // 
@@ -649,7 +650,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1357, 511);
+            this.ClientSize = new System.Drawing.Size(1374, 511);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.GBPasajero);
