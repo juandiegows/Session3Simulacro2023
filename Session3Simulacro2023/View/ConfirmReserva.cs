@@ -76,10 +76,10 @@ namespace Session3Simulacro2023 {
         private void btnAgregar_Click(object sender, EventArgs e) {
             if(Pasajeros.Count >= Cantidad) {
                 MessageBox.Show("Ya alcanzo el limite de pasajero a registrar");
-                GBPasajero.Enabled = false;
+                btnEliminar.Enabled = false;
                 return;
             }
-            if (GBPasajero.IsValid()) {
+            if (btnEliminar.IsValid()) {
                 
                 if(PBPasaporte.Image == null) {
                     MessageBox.Show("Seleccione una foto");
@@ -103,9 +103,10 @@ namespace Session3Simulacro2023 {
                     Telefono = txtCelular.Text,
                     URl = "/img/" + txtNumberPass.Text.Trim() + fileInfo.Extension
                 });
-                dataGridView1.DataSource = Pasajeros;
+                DPasajero.DataSource = null;
+                DPasajero.DataSource = Pasajeros;
                 if (Pasajeros.Count >= Cantidad) {
-                    GBPasajero.Enabled = false;
+                    btnEliminar.Enabled = false;
                     btnConfirm.Enabled = true;
                     return;
                 }
@@ -116,10 +117,19 @@ namespace Session3Simulacro2023 {
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
-            if(e.ColumnIndex == dataGridView1.ColumnCount - 1) {
+            if(e.ColumnIndex == DPasajero.ColumnCount - 1) {
                 int row = e.RowIndex;
                 Pasajero pasajero = Pasajeros[row];
                 new VerPasaporte(pasajero).ShowDialog();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("¿Desea eliminar el pasajero?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes) {
+                Pasajeros.RemoveAt(DPasajero.CurrentRow.Index);
+                DPasajero.DataSource = null;
+                DPasajero.DataSource = Pasajeros;
+                btnConfirm.Enabled = true;
             }
         }
 
