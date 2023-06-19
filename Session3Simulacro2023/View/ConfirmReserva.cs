@@ -127,7 +127,7 @@ namespace Session3Simulacro2023 {
         private void button2_Click(object sender, EventArgs e) {
             if (MessageBox.Show("¿Desea eliminar el pasajero?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes) {
                 var pasajero = Pasajeros[DPasajero.CurrentRow.Index];
-                File.Delete(pasajero.URl);
+                File.Delete(Environment.CurrentDirectory+"/"+pasajero.URl);
                 Pasajeros.RemoveAt(DPasajero.CurrentRow.Index);
                 DPasajero.DataSource = null;
                 DPasajero.DataSource = Pasajeros;
